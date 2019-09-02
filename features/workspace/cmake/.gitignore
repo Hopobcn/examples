@@ -1,3 +1,8 @@
 build_debug
 build_release
 build
+cmake-build-debug
+hello/cmake-build*
+say/cmake-build*
+chat/cmake-build*
+.idea
