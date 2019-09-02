@@ -1,6 +1,7 @@
 #include "hello.h"
 
-void chat(){
+void chat()
+{
     hello();
     hello();
     hello();

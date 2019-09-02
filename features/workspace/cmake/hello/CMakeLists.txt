@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
 
-project(Chat)
+project(Hello)
 
 if(EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
     include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo_multi.cmake)
@@ -10,8 +10,6 @@ endif()
 
 conan_basic_setup(NO_OUTPUT_DIRS)
 
-add_library(chat chat.cpp)
-conan_target_link_libraries(chat)
-
-add_executable(app app.cpp)
-target_link_libraries(app chat)
+add_library(hello ${CMAKE_CURRENT_SOURCE_DIR}/src/hello.cpp)
+target_include_directories(hello PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+conan_target_link_libraries(hello)
