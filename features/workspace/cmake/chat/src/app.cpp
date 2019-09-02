@@ -1,5 +1,6 @@
 #include "chat.h"
 
-int main(){
+int main()
+{
     chat();
 }

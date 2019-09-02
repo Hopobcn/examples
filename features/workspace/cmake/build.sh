@@ -9,11 +9,11 @@ rm -rf hello/build
 rm -rf chat/build
 mkdir build
 
-pushd build
+cd build
 
 conan workspace install ../conanws_gcc.yml
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 
-popd
+cd -
 chat/build/Release/app
